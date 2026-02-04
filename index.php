@@ -2155,10 +2155,7 @@
                 <div class="row">
                     parte principal
                     
-                    <?php 
-                        var_dump(extension_loaded('sqlsrv'));
-                        var_dump(extension_loaded('pdo_sqlsrv')); 
-                    ?>
+                    
                 </div>
             </div>
             <!-- [ Main Content ] end -->
