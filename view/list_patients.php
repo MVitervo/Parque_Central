@@ -1,5 +1,8 @@
 
 <div id="sectionListPatients">
+    <div class="btn btn-grpup row">
+        <button class="btn btn-success col-12 col-md-3 col-lg-md-2">Agregar</button>
+    </div>
 
     <table id="tableListPatients" class="table table-striped table-hover table-responsive" style="width:100%">
         <thead class="table-primary">
