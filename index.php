@@ -167,6 +167,8 @@
             <div class="main-content">
                 <div class="row">
                     parte principal
+
+                    prueba
                 </div>
             </div>
             <!-- [ Main Content ] end -->
