@@ -375,6 +375,9 @@
     <!--! BEGIN: Theme Customizer  !-->
     <script src="assets/js/theme-customizer-init.min.js"></script>
     <!--! END: Theme Customizer !-->
+    <!-- jquery y datatable -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/datatables.net/js/dataTables.min.js"></script>
 </body>
 
 </html>
