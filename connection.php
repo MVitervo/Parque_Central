@@ -3,7 +3,7 @@
 // $dbuser = "sa";
 // $dbpassword = "12345678";
 // $dsn = "sqlsrv:Server=localhost\\SQLEXPRESS;Database=materiales;IntegratedSecurity=true";
-$dsn = "sqlsrv:Server=localhost\\SQLEXPRESS;Database=materiales";
+$dsn = "sqlsrv:Server=VITERVO\\SQLEXPRESS;Database=ParqueCentral";
 
 try {
     //crear conexion sqlerver
