@@ -166,9 +166,14 @@
             <!-- [ Main Content ] start -->
             <div class="main-content">
                 <div class="row">
-                    parte principal
-                        
-                    prueba
+                
+                    <div class="container-general__contenido shadow-sm bg-body mt-4 p-3 rounded">
+                        <div class="container-fluid cont-of-y">
+                            <div id="" class="contenido-tab tab-1 mt-3"></div> <!-- aqui se muestra la tabla de incidencias -->
+                            <div id="" class="contenido-tab tab-2 "></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <!-- [ Main Content ] end -->
@@ -373,3 +378,31 @@
 </body>
 
 </html>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DataTables core -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
+<!-- Responsive (DESPUÉS del core) -->
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        listPatients();
+    });
+
+    function listPatients() {
+        $.ajax({
+            method: 'GET',
+            url: '/view/list_patients.php',
+            success: function(respuesta) {
+                $('.tab-1').html(respuesta);
+            }
+        });
+    }
+</script>
