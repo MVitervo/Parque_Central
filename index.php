@@ -12,6 +12,10 @@
     <!--! BEGIN: Apps Title-->
     <title>Parque central || Dashboard</title>
     <!--! END:  Apps Title-->
+    <!-- styles for datatable -->
+    <link rel="stylesheet" href="assets/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.dataTables.min.css">
+
     <!--! BEGIN: Favicon-->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <!--! END: Favicon-->
@@ -376,22 +380,26 @@
     <script src="assets/js/theme-customizer-init.min.js"></script>
     <!--! END: Theme Customizer !-->
     <!-- jquery y datatable -->
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="/node_modules/datatables.net/js/dataTables.min.js"></script>
+    
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/datatables.net/js/dataTables.min.js"></script>
+    <script src="node_modules/dataTables.responsive.min.js"></script>
 </body>
 
 </html>
 
+
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
 
 <!-- DataTables core -->
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
-<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script> -->
 
 <!-- Responsive (DESPUÉS del core) -->
-<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
-<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<!-- <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script> -->
 
 
 <script>
@@ -402,8 +410,9 @@
     function listPatients() {
         $.ajax({
             method: 'GET',
-            url: '/view/list_patients.php',
+            url: 'view/list_patients.php',
             success: function(respuesta) {
+                console.log(respuesta)
                 $('.tab-1').html(respuesta);
             }
         });

@@ -18,19 +18,20 @@
 <script>
 
     $(document).ready(function() {
+         console.log(jQuery.fn.jquery);
         tabla();
     });
 
     function tabla() {
         $('#tableListPatients').DataTable({
-            language: {
-                url: '/config/datatables-bs5/language-spanish.json'
-            },
+            // language: {
+            //     url: '/config/datatables-bs5/language-spanish.json'
+            // },
             ordering: false,
             responsive: true,
             keys: false,
             ajax: {
-                url: '/controllers/list_patients_controller.php',
+                url: 'controllers/list_patients_controller.php',
                 type: 'GET',
                 dataSrc: ''
             },
