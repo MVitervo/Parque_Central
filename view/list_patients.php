@@ -26,7 +26,7 @@
             language: {
                 url: '/config/datatables-bs5/language-spanish.json'
             },
-            order: [0, 'desc'],
+            ordering: false,
             responsive: true,
             keys: false,
             ajax: {
