@@ -46,7 +46,7 @@
             <div class="m-header">
                 <a href="index.html" class="b-brand">
                     <!-- ========   change your logo hear   ============ -->
-                     <h3>Parque central</h3>
+                    <h3>Parque central</h3>
                 </a>
             </div>
             <div class="navbar-content">
@@ -76,7 +76,7 @@
                             <li class="nxl-item"><a class="nxl-link" href="reports-timesheets.html">Timesheets Report</a></li>
                         </ul>
                     </li> -->
-                    
+
 
                 </ul>
             </div>
@@ -119,7 +119,7 @@
                 </div>
                 <!--! [End] nxl-lavel-mega-menu-toggle !-->
                 <!--! [Start] nxl-lavel-mega-menu !-->
-                
+
                 <!--! [End] nxl-lavel-mega-menu !-->
             </div>
             <!--! [End] Header Left !-->
@@ -140,37 +140,14 @@
     <main class="nxl-container">
         <div class="nxl-content">
             <!-- [ page-header ] start -->
-            <div class="page-header">
-                <div class="page-header-left d-flex align-items-center">
-                    <div class="page-header-title">
-                        <h5 class="m-b-10">Dashboard</h5>
-                    </div>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item">Dashboard</li>
-                    </ul>
-                </div>
-                <div class="page-header-right ms-auto">
-                    <div class="page-header-right-items">
-                        <div class="d-flex d-md-none">
-                            <a href="javascript:void(0)" class="page-header-right-close-toggle">
-                                <i class="feather-arrow-left me-2"></i>
-                                <span>Back</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="d-md-none d-flex align-items-center">
-                        <a href="javascript:void(0)" class="page-header-right-open-toggle">
-                            <i class="feather-align-right fs-20"></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="page-header d-flex justify-content-end">
+                      <button class="btn btn-primary col-12 col-md-2" onclick="listPatients()">Listar</button>
             </div>
             <!-- [ page-header ] end -->
             <!-- [ Main Content ] start -->
             <div class="main-content">
                 <div class="row">
-                
+
                     <div class="container-general__contenido shadow-sm bg-body mt-4 p-3 rounded">
                         <div class="container-fluid cont-of-y">
                             <div id="" class="contenido-tab tab-1 mt-3"></div> <!-- aqui se muestra la tabla de incidencias -->
@@ -380,8 +357,8 @@
     <script src="assets/js/theme-customizer-init.min.js"></script>
     <!--! END: Theme Customizer !-->
     <!-- jquery y datatable -->
-    
-    
+
+
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/datatables.net/js/dataTables.min.js"></script>
     <script src="node_modules/dataTables.responsive.min.js"></script>

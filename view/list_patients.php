@@ -1,7 +1,7 @@
 
 <div id="sectionListPatients">
-    <div class="btn btn-grpup row">
-        <button class="btn btn-success col-12 col-md-3 col-lg-md-2">Agregar</button>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-success col-12 col-md-3 col-lg-md-2" onclick="addPatientForm()">Agregar</button>
     </div>
 
     <table id="tableListPatients" class="table table-striped table-hover table-responsive" style="width:100%">
@@ -16,6 +16,9 @@
         <tbody>
         </tbody>
     </table>
+</div>
+<div id="form_section">
+
 </div>
 
 <script>
@@ -60,7 +63,17 @@
             }
         });
     }
+function addPatientForm(){
+    $.ajax({
+        url: 'view/forms/add_patient.php',
+        method: 'POST',
+        success: function(response){
+            $('#sectionListPatients').hide();
+            $('#form_section').html(response).fadeIn();
+        }
+    })
 
+}
     // function buscarDatos() {
     //     $('#tableListPatients').DataTable().ajax.reload(null, false);
     // }
