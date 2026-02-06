@@ -74,8 +74,8 @@ function addPatientForm(){
     })
 
 }
-    // function buscarDatos() {
-    //     $('#tableListPatients').DataTable().ajax.reload(null, false);
-    // }
+    function buscarDatos() {
+        $('#tableListPatients').DataTable().ajax.reload(null, false);
+    }
 
 </script>
