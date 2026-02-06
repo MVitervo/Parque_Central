@@ -11,10 +11,14 @@
     <!--! The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags !-->
     <!--! BEGIN: Apps Title-->
     <title>Parque central || Dashboard</title>
+
+     <!-- google icons -->
+    <link rel="stylesheet" href="assets/css/iconfont/material-icons.css">
     <!--! END:  Apps Title-->
     <!-- styles for datatable -->
     <link rel="stylesheet" href="assets/css/dataTables.dataTables.min.css">
     <link rel="stylesheet" href="assets/css/responsive.dataTables.min.css">
+   
 
     <!--! BEGIN: Favicon-->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
@@ -147,7 +151,6 @@
             <!-- [ Main Content ] start -->
             <div class="main-content card-body">
                 <div class="row">
-
                     <div class="container-general__contenido shadow-sm mt-4 p-3 rounded">
                         <div class="container-fluid cont-of-y">
                             <div id="" class="contenido-tab tab-1 mt-3"></div>
@@ -386,7 +389,6 @@
             method: 'GET',
             url: 'view/list_patients.php',
             success: function(respuesta) {
-                console.log(respuesta)
                 $('.tab-1').html(respuesta);
             }
         });

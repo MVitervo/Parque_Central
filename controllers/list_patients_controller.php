@@ -12,11 +12,13 @@ try {
     
     while ($result = $queryGetPatients->fetch(PDO::FETCH_ASSOC)) {
         // Inserta la fila actual
+        $btnDelete = '<span style="cursor: pointer;" class="material-icons delete-btn text-danger" onclick="deletePatient('.$result['Id'].')">delete</span>';
         $row = array(
             'Name' => $result['Name'],
             'Lastname' => $result['Lastname'],
             'CURP' => $result['CURP'],
-            'RFC' => $result['RFC']
+            'RFC' => $result['RFC'],
+            'option' => $btnDelete
         );
         $response[] = $row;
     }

@@ -1,4 +1,3 @@
-
 <div id="sectionListPatients">
     <div class="d-flex justify-content-center">
         <button class="btn btn-success col-12 col-md-3 col-lg-md-2" onclick="addPatientForm()">Agregar</button>
@@ -11,6 +10,7 @@
                 <th>Apellido</th>
                 <th>CURP</th>
                 <th>RFC</th>
+                <th>Opcion</th>
             </tr>
         </thead>
         <tbody>
@@ -22,7 +22,6 @@
 </div>
 
 <script>
-
     $(document).ready(function() {
         console.log(jQuery.fn.jquery);
         tabla();
@@ -47,8 +46,7 @@
                 type: 'GET',
                 dataSrc: ''
             },
-            columns: [
-                {
+            columns: [{
                     data: 'Name'
                 },
                 {
@@ -59,6 +57,13 @@
                 },
                 {
                     data: 'RFC'
+                },
+                {
+                    data: 'option',
+                    width: '80px',
+                    render: function(data, type, row, meta) {
+                        return data;
+                    },
                 }
             ],
             initComplete: function() {
@@ -69,16 +74,58 @@
             }
         });
     }
-    
-    function addPatientForm(){
+
+    function addPatientForm() {
         $.ajax({
             url: 'view/forms/add_patient.php',
             method: 'POST',
-            success: function(response){
+            success: function(response) {
                 $('#sectionListPatients').hide();
                 $('#form_section').html(response).fadeIn();
             }
         });
     }
 
+
+    function deletePatient(id) {
+        Swal.fire({
+            template: '#question_template',
+            title: "Eliminar Registro",
+            html: '<label style="font-size:24px; font-weigth:bolder">El registro se eliminará de forma permanente, ¿Desea continuar?</label>',
+            reverseButtons: true,
+              confirmButtonText: "Sí, eliminar",
+            showCancelButton: true
+        }).then((action) => {
+            if (action.value){
+                  $.ajax({
+                    url: 'controllers/delete_patients_controller.php',
+                    method: 'POST',
+                    data: {
+                        id: id
+                    },
+                    success: function(response) {
+                        if (response.status == true) {
+                            Swal.fire({
+                                template: '#success_template',
+                                title: "Eliminado!",
+                                html: '<label style="font-size:24px; font-weight:bold">' + response.message + '</label>',
+                            }).then(() => {
+                                $('#form_section').hide();
+                                $('#sectionListPatients').show();
+                                searchData();
+                            });
+                        } else {
+                            Swal.fire({
+                                template: '#error_template',
+                                title: "Oops!",
+                                html: response.message,
+                            })
+                        }
+                    }
+                });
+
+            }
+
+        });
+    }
 </script>
