@@ -44,7 +44,7 @@
     <nav class="nxl-navigation">
         <div class="navbar-wrapper">
             <div class="m-header">
-                <a href="index.html" class="b-brand">
+                <a href="index.php" class="b-brand">
                     <!-- ========   change your logo hear   ============ -->
                     <h3>Parque central</h3>
                 </a>
@@ -55,7 +55,7 @@
                         <label>Menu</label>
                     </li>
                     <li class="nxl-item nxl-hasmenu">
-                        <a href="index.html" class="nxl-link">
+                        <a href="index.php" class="nxl-link">
                             <span class="nxl-micon"><i class="feather-airplay"></i></span>
                             <span class="nxl-mtext">Historial</span>
                         </a>
@@ -138,19 +138,19 @@
     <!--! [Start] Main Content !-->
     <!--! ================================================================ !-->
     <main class="nxl-container">
-        <div class="nxl-content">
+        <div class="nxl-content card">
             <!-- [ page-header ] start -->
-            <div class="page-header d-flex justify-content-end">
+            <div class="page-header d-flex justify-content-end card-header">
                       <button class="btn btn-primary col-12 col-md-2" onclick="listPatients()">Listar</button>
             </div>
             <!-- [ page-header ] end -->
             <!-- [ Main Content ] start -->
-            <div class="main-content">
+            <div class="main-content card-body">
                 <div class="row">
 
-                    <div class="container-general__contenido shadow-sm bg-body mt-4 p-3 rounded">
+                    <div class="container-general__contenido shadow-sm mt-4 p-3 rounded">
                         <div class="container-fluid cont-of-y">
-                            <div id="" class="contenido-tab tab-1 mt-3"></div> <!-- aqui se muestra la tabla de incidencias -->
+                            <div id="" class="contenido-tab tab-1 mt-3"></div>
                             <div id="" class="contenido-tab tab-2 "></div>
                         </div>
                     </div>
@@ -171,7 +171,7 @@
     <!--! ================================================================ !-->
     <!--! BEGIN: Theme Customizer !-->
     <!--! ================================================================ !-->
-    <div class="theme-customizer">
+    <!-- <div class="theme-customizer">
         <div class="customizer-handle">
             <a href="javascript:void(0);" class="cutomizer-open-trigger bg-primary">
                 <i class="feather-settings"></i>
@@ -185,7 +185,7 @@
                 </a>
             </div>
             <div class="customizer-sidebar-body position-relative p-4" data-scrollbar-target="#psScrollbarInit">
-                <!--! BEGIN: [Navigation] !-->
+                
                 <div class="position-relative px-3 pb-3 pt-4 mt-3 mb-5 border border-gray-2 theme-options-set">
                     <label class="py-1 px-2 fs-8 fw-bold text-uppercase text-muted text-spacing-2 bg-white border border-gray-2 position-absolute rounded-2 options-label" style="top: -12px">Navigation</label>
                     <div class="row g-2 theme-options-items app-navigation" id="appNavigationList">
@@ -199,8 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <!--! END: [Navigation] !-->
-                <!--! BEGIN: [Header] !-->
+                
                 <div class="position-relative px-3 pb-3 pt-4 mt-3 mb-5 border border-gray-2 theme-options-set mt-5">
                     <label class="py-1 px-2 fs-8 fw-bold text-uppercase text-muted text-spacing-2 bg-white border border-gray-2 position-absolute rounded-2 options-label" style="top: -12px">Header</label>
                     <div class="row g-2 theme-options-items app-header" id="appHeaderList">
@@ -214,8 +213,7 @@
                         </div>
                     </div>
                 </div>
-                <!--! END: [Header] !-->
-                <!--! BEGIN: [Skins] !-->
+                
                 <div class="position-relative px-3 pb-3 pt-4 mt-3 mb-5 border border-gray-2 theme-options-set">
                     <label class="py-1 px-2 fs-8 fw-bold text-uppercase text-muted text-spacing-2 bg-white border border-gray-2 position-absolute rounded-2 options-label" style="top: -12px">Skins</label>
                     <div class="row g-2 theme-options-items app-skin" id="appSkinList">
@@ -229,8 +227,7 @@
                         </div>
                     </div>
                 </div>
-                <!--! END: [Skins] !-->
-                <!--! BEGIN: [Typography] !-->
+                
                 <div class="position-relative px-3 pb-3 pt-4 mt-3 mb-0 border border-gray-2 theme-options-set">
                     <label class="py-1 px-2 fs-8 fw-bold text-uppercase text-muted text-spacing-2 bg-white border border-gray-2 position-absolute rounded-2 options-label" style="top: -12px">Typography</label>
                     <div class="row g-2 theme-options-items font-family" id="fontFamilyList">
@@ -324,7 +321,7 @@
                         </div>
                     </div>
                 </div>
-                <!--! END: [Typography] !-->
+                
             </div>
             <div class="customizer-sidebar-footer px-4 ht-60 border-top d-flex align-items-center gap-2">
                 <div class="flex-fill w-50">
@@ -335,7 +332,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--! ================================================================ !-->
     <!--! [End] Theme Customizer !-->
     <!--! ================================================================ !-->

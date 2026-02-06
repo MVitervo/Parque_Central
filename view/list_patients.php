@@ -24,9 +24,13 @@
 <script>
 
     $(document).ready(function() {
-         console.log(jQuery.fn.jquery);
+        console.log(jQuery.fn.jquery);
         tabla();
     });
+
+    function searchData() {
+        $('#tableListPatients').DataTable().ajax.reload(null, false);
+    }
 
     function tabla() {
         $('#tableListPatients').DataTable({
@@ -36,6 +40,8 @@
             ordering: false,
             responsive: true,
             keys: false,
+            pageLength: 10,
+            lengthMenu: [10, 25, 50, 100],
             ajax: {
                 url: 'controllers/list_patients_controller.php',
                 type: 'GET',
@@ -56,26 +62,23 @@
                 }
             ],
             initComplete: function() {
-                let windowHeight = $(window).height();
-                let pagelen = (windowHeight * 0.62) / 29;
-                $('#tableListPatients').DataTable().page.len(pagelen).draw();
+                // let windowHeight = $(window).height();
+                // let pagelen = (windowHeight * 0.62) / 29;
+                // $('#tableListPatients').DataTable().page.len(pagelen).draw();
                 $('.tab-1').fadeIn();
             }
         });
     }
-function addPatientForm(){
-    $.ajax({
-        url: 'view/forms/add_patient.php',
-        method: 'POST',
-        success: function(response){
-            $('#sectionListPatients').hide();
-            $('#form_section').html(response).fadeIn();
-        }
-    })
-
-}
-    function buscarDatos() {
-        $('#tableListPatients').DataTable().ajax.reload(null, false);
+    
+    function addPatientForm(){
+        $.ajax({
+            url: 'view/forms/add_patient.php',
+            method: 'POST',
+            success: function(response){
+                $('#sectionListPatients').hide();
+                $('#form_section').html(response).fadeIn();
+            }
+        });
     }
 
 </script>
